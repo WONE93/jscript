@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayType.html</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p id="show"></p>
+    <p id="show_1"></p>
+    <button onclick="createTable()">Create Table</button>
+    <script>
+
+        function createTable() {
+            console.log(document.getElementById("show"));
+        }
+        document.getElementById("show").innerHTML = "Hello";
+
+        var friend1 = {
+            firstName: "gildong",
+            lastName: "Hong",
+            age: 16,
+
+        }
+        var friend2 = {
+            firstName: "seongwoo",
+            lastName: "Hong",
+            age: 26,
+
+        }
+        var friend3 = {
+            firstName: "junwon",
+            lastName: "Ha",
+            age: 36,
+
+        }
+
+        var $myTag = "<ul>";
+        var friends = [friend1, friend2, friend3];
+        for (obj of friends) {
+            $myTag += "<li>";
+            for (f in obj) {
+                $myTag += obj[f] + " ";
+            }
+            $myTag += "</li>";
+        }
+        $myTag += "</ul>";
+        console.log($myTag);
+        document.getElementById("show").innerHTML = $myTag;
+
+        var $myTag_1 = "<table style=border-collapse: collapse;'>";
+        $myTag_1 += "<tr>";
+        for(filed in obj){
+        $myTag_1 += "<th style='border:1px solid #333;'>" + filed + "</th>";
+        }
+        $myTag_1 += "</tr>";
+        for (obj of friends) {
+            $myTag_1 += "<tr>";
+            for (f in obj) {
+                $myTag_1 += "<td style='border:1px solid red;'>" + obj[f] + "</td>"
+            }
+
+
+            $myTag_1 += "</tr>";
+        }
+        $myTag_1 += "</table>";
+        console.log($myTag_1);
+        document.getElementById("show_1").innerHTML = $myTag_1;
+    </script>
+
+</body>
+
+</html>
