@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0325.html</title>
+
+    <style>
+        div {
+
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            float: left;
+            border: 2px blue solid;
+            text-align: center;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    span {
+    <div><span>1</span></div>
+    <div><span>2</span></div>
+    <div><span>3</span></div>
+    <div><span>4</span></div>
+    <div><span>5</span></div>
+    <div><span>6</span></div>
+    <div><span>7</span></div>
+    <div><span>8</span></div>
+   
+    }
+
+    <script>
+            var $divs = document.getElementsByTagName("div");
+            console.log($divs);
+            for(var i=0; i<$divs.length; i++){
+                $divs[i].setAttribute("style", "background-color: yellow")
+            }
+    </script>
+
+</body>
+
+
+</html>

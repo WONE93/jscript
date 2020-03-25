@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <input type="text" id="firstName" value="gildong">
+    <input type="text" name="lastName" id="lastName" value="Hong">
+    <input type="text" name="age" id="age" value="16">
+    <button id="btn" onclick="translateBtn()"> Click</button>
+
+    <table id="tb1" border="1" >
+        <tbody>
+            <tr>
+                <td>FirstName</td>
+                <td>LastName</td>
+                <td>Age</td>
+            </tr>
+            <tr>
+                <td>gildong</td>
+                <td>Hong</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>hyewon</td>
+                <td>seo</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>jiwon</td>
+                <td>lee</td>
+                <td>47</td>
+            </tr>
+
+        </tbody>
+    </table>
+   <script>
+       var tds = document.querySelectorAll("#tb1 tr")
+       console.log(tds);
+
+       tds.forEach(function (a,b){
+           console.log(a,b);
+           a.setAttribute('style', 'background:#eee')
+       })
+       
+   </script>
+       
+
+</body>
+
+</html>

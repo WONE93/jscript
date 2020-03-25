@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test.html</title>
+</head>
+    
+<body>
+    <button id="btn" onclick="btn()"> Click</button>
+
+    <table id="tb1" border=1>
+        <tr>
+            <td>name</td>
+            <td>phone</td>
+            <td>Age</td>
+        </tr>
+      
+
+    </table>
+
+    <script>
+        var $titles = ["name", "phone", "age"];
+        var addList = [
+            {name:"Hong" , phone:"1234-1234", age: 26},
+            {name:"seo" , phone:"1224-2234", age: 26},
+            {name:"yu" , phone:"1234-1234", age: 26},
+            {name:"Hwang" , phone:"1234-1234", age: 26}
+        ]
+
+            function btn(){
+
+            var tb1 = document.getElementById("tb1");
+            var $text, $td, $tr;
+            addList.forEach(function (o){
+                $tr = document.createElement("tr");
+                for(f of $titles) {
+                    $text = document.createTextNode(o[f]); //텍스트노드생성
+                    $td = document.createElement("td"); //요소노드를 생성
+                    $td.appendChild($text);//요소 노드에 바디 객체를 추가
+                    $tr.appendChild($td);
+
+                }
+                tb1.appendChild($tr);
+            })
+        }
+
+    </script>
+
+</body>
+</html>

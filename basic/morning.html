@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>morning.html</title>
+</head>
+
+<body>
+    <input type="text" id="firstName" value="gildong">
+    <input type="text" name="lastName" id="lastName" value="Hong">
+    <input type="text" name="age" id="age">
+    <button id="btn" onclick="addTr()"> Click</button>
+    <table id="tb1" border=1>
+        <tr>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>gildong</td>
+            <td>Hong</td>
+            <td>16</td>
+        </tr>
+
+    </table>
+
+    <script>
+        
+        var tb1 = document.getElementById("tb1")
+
+        function addTr() {
+            var fName = document.getElementById('firstName').value;
+            var lName = document.getElementById('lastName').value;
+            var age = document.getElementById('age').value;
+
+            var $tr, $td, $text;
+            $tr = document.createElement("tr");
+
+            $text = document.createTextNode(fName);
+            $td = document.createElement("td");
+            $td.appendChild($text);
+            $tr.appendChild($td);
+
+            $text = document.createTextNode(lName);
+            $td = document.createElement("td");
+            $td.appendChild($text);
+            $tr.appendChild($td);
+
+            $text = document.createTextNode(age);
+            $td = document.createElement("td");
+            $td.appendChild($text);
+            $tr.appendChild($td);
+
+            tb1.appendChild($tr);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
